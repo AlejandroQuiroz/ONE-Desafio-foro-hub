@@ -34,57 +34,12 @@
 
 **Configurar la base de datos**:
 
-    - Actualizar las configuraciones en `src/main/resources/application.yml` con las credenciales de tu base de datos.
+- Actualizar las configuraciones en `src/main/resources/application.yml` con las credenciales de tu base de datos.
 
     ```properties
-    spring.datasource.url=jdbc:postgresql://localhost:5432/db_api_topics
-    spring.datasource.username=tu-usuario
-    spring.datasource.password=tu-contraseña
-    spring.jpa.hibernate.ddl-auto=update
-    ```
-
-## Uso de la API
-
-### Endpoints
-
-- **Crear un nuevo tópico**
-    ```http
-    POST /api/topics
-    ```
-    - Cuerpo de la petición (JSON):
-        ```json
-        {
-            "titulo": "Título del Tópico",
-            "mensaje": "Contenido del Tópico",
-            "autorId": 1
-        }
-        ```
-
-- **Mostrar todos los tópicos**
-    ```http
-    GET /api/topics
-    ```
-
-- **Mostrar un tópico específico**
-    ```http
-    GET /api/topics/{id}
-    ```
-
-- **Actualizar un tópico**
-    ```http
-    PUT /api/topics/{id}
-    ```
-    - Cuerpo de la petición (JSON):
-        ```json
-        {
-            "titulo": "Nuevo Título del Tópico",
-            "mensaje": "Nuevo Contenido del Tópico"
-        }
-        ```
-
-- **Eliminar un tópico**
-    ```http
-    DELETE /api/topics/{id}
+    url: jdbc:postgresql://localhost:5432/<tu-db>
+    username: <tu-usuario>
+    password: <tu-password>
     ```
 
 ### Autenticación y Autorización
